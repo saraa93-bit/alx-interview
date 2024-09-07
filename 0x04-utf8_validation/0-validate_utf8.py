@@ -3,6 +3,7 @@
 Module to validate UTF-8 encoding
 """
 
+
 def validUTF8(data):
     # Number of bytes in the current UTF-8 character
     num_bytes = 0
@@ -35,7 +36,7 @@ def validUTF8(data):
             if not (byte & mask1 and not (byte & mask2)):
                 return False
 
-        # Decrement the number of bytes remaining in the current UTF-8 character
+        # Decrement the number of bytes remaining
         num_bytes -= 1
 
     # If there are leftover bytes, return False
